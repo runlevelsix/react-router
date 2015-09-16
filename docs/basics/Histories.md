@@ -15,6 +15,10 @@ consumption with React Router.
 
 Get them from the history package:
 
+```shell
+npm install history --save
+```
+
 ```js
 // JavaScript module import
 import createBrowserHistory from 'history/lib/createBrowserHistory'
@@ -56,6 +60,19 @@ Browser history is the recommended history for browser application with
 React Router. It uses the [History](https://developer.mozilla.org/en-US/docs/Web/API/History)
 API built into the browser to manipulate the url, creating real urls that
 look like `example.com/some/path`.
+
+Setup browser history by requiring the module as mentioned above. Then
+initialize `createBrowserHistory`:
+
+```javascript
+var history = createBrowserHistory();
+```
+
+And pass it into the `<Router />`:
+
+```javascript
+<Router history={history}>{routes}</Router>
+```
 
 #### Configuring Your Server
 
